@@ -1,4 +1,5 @@
 const data = [
+  { puzzleNumber: 634, words: ["evens", "yeesh", "sleet", "sweep"] },
   { puzzleNumber: 597, words: ["feast"] },
   { puzzleNumber: 596, words: ["wrong", "sneak", "punty", "linty", "ninth"] },
   { puzzleNumber: 595, words: ["cargo", "batch", "fancy", "dance"] },
