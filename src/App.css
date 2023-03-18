@@ -91,10 +91,10 @@ button:disabled {
   background-color: lightgray;
 }
 .green {
-  background-color: green;
+  background-color: #5fa759;
 }
 .yellow {
-  background-color: yellow;
+  background-color: #fcdc4f;
 }
 .wrongText {
   color: red;
@@ -104,7 +104,7 @@ button:disabled {
   border-color: red;
 }
 .cursor {
-  border-color: skyblue;
+  border-color:  #3399FF;
 }
 .keyboardRow {
   display: flex;
