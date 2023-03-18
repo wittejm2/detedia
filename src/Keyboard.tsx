@@ -23,60 +23,41 @@ export default function Keyboard({
 }: Props) {
   return (
     <div>
-      <div className="keyboardRow">
-        {row1.split("").map((letter) => (
-          <KeyButton
-            letter={letter}
-            usage={usageAllLetters[letter]}
-            activePuzzleIndex={activePuzzleIndex}
-            guess={guess}
-            setGuess={setGuess}
-            cursorIndex={cursorIndex}
-            setCursorIndex={setCursorIndex}
-          />
-        ))}
-      </div>
-      <div className="keyboardRow">
-        {row2.split("").map((letter) => (
-          <KeyButton
-            letter={letter}
-            usage={usageAllLetters[letter]}
-            activePuzzleIndex={activePuzzleIndex}
-            guess={guess}
-            setGuess={setGuess}
-            cursorIndex={cursorIndex}
-            setCursorIndex={setCursorIndex}
-          />
-        ))}
-      </div>
-      <div className="keyboardRow">
-        {row3.split("").map((letter) => (
-          <KeyButton
-            letter={letter}
-            usage={usageAllLetters[letter]}
-            activePuzzleIndex={activePuzzleIndex}
-            guess={guess}
-            setGuess={setGuess}
-            cursorIndex={cursorIndex}
-            setCursorIndex={setCursorIndex}
-          />
-        ))}
-        <div
-          className="delButton"
-          onClick={() =>
-            handleKeyInput(
-              "Backspace",
-              activePuzzleIndex,
-              guess,
-              setGuess,
-              cursorIndex,
-              setCursorIndex,
-            )
-          }
-        >
-          DEL
-        </div>
-      </div>
+      {[row1, row2, row3].map((row, rowIndex) => (
+        <>
+          <div className="keyboardRow">
+            {row.split("").map((letter) => (
+              <KeyButton
+                letter={letter}
+                usage={usageAllLetters[letter]}
+                activePuzzleIndex={activePuzzleIndex}
+                guess={guess}
+                setGuess={setGuess}
+                cursorIndex={cursorIndex}
+                setCursorIndex={setCursorIndex}
+              />
+            ))}
+
+            {rowIndex === 2 && (
+              <div
+                className="delButton"
+                onClick={() =>
+                  handleKeyInput(
+                    "Backspace",
+                    activePuzzleIndex,
+                    guess,
+                    setGuess,
+                    cursorIndex,
+                    setCursorIndex,
+                  )
+                }
+              >
+                DEL
+              </div>
+            )}
+          </div>
+        </>
+      ))}
     </div>
   );
 }
