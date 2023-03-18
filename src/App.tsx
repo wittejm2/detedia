@@ -66,6 +66,7 @@ function App() {
           activePuzzleIndex,
           submissions,
         )}
+        submissions={submissions}
       />
       <button
         onClick={() =>

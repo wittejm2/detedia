@@ -11,6 +11,7 @@ type Props = {
   cursorIndex: number;
   setCursorIndex: any;
   usageAllLetters: { [key: string]: string[] };
+  submissions: string[][];
 };
 
 export default function Keyboard({
@@ -20,6 +21,7 @@ export default function Keyboard({
   cursorIndex,
   setCursorIndex,
   usageAllLetters,
+  submissions,
 }: Props) {
   return (
     <div>
@@ -35,6 +37,7 @@ export default function Keyboard({
                 setGuess={setGuess}
                 cursorIndex={cursorIndex}
                 setCursorIndex={setCursorIndex}
+                submissions={submissions}
               />
             ))}
 
@@ -70,6 +73,7 @@ type KeyButtonProps = {
   setGuess: any;
   cursorIndex: number;
   setCursorIndex: any;
+  submissions: string[][];
 };
 
 function KeyButton({
@@ -80,6 +84,7 @@ function KeyButton({
   setGuess,
   cursorIndex,
   setCursorIndex,
+  submissions,
 }: KeyButtonProps) {
   const width = 40;
   const height = 44;
@@ -119,14 +124,18 @@ function KeyButton({
             width={width}
             height={verticalStepSize}
             stroke={
-              {
-                green: "#228B22",
-                white: "white",
-                yellow: "#FFEECC",
-                blank: "#ACACAC",
-              }[color]
+              keyIsMissing(letter, color, index, guess, submissions)
+                ? "red"
+                : {
+                    green: "#228B22",
+                    white: "white",
+                    yellow: "#FFEECC",
+                    blank: "#ACACAC",
+                  }[color]
             }
-            strokeWidth={1}
+            strokeWidth={
+              keyIsMissing(letter, color, index, guess, submissions) ? 4 : 1
+            }
             fill={
               {
                 green: "#6bd425",
@@ -140,4 +149,42 @@ function KeyButton({
       </svg>
     </div>
   );
+}
+
+function keyIsMissing(
+  letter: string,
+  color: string,
+  rowIndex: number,
+  guess: string[],
+  submissions: string[][],
+) {
+  if (submissions.length === 0) return false;
+  const thisRowGuess = guess.slice(rowIndex * 5, (rowIndex + 1) * 5);
+  const thisRowSubmission = submissions[0].slice(
+    rowIndex * 5,
+    (rowIndex + 1) * 5,
+  );
+
+  if (
+    color === "green" &&
+    !thisRowGuess.some(
+      (guessKey, index) =>
+        guessKey === thisRowSubmission[index] && guessKey === letter,
+    )
+  ) {
+    return true;
+  }
+  if (
+    color === "yellow" &&
+    !thisRowGuess.some((guessKey) => guessKey === letter)
+  ) {
+    return true;
+  }
+  if (
+    color === "blank" &&
+    thisRowGuess.some((guessKey) => guessKey === letter)
+  ) {
+    return true;
+  }
+  return false;
 }

@@ -44,6 +44,9 @@ h1 {
   height: 40px;
   transition: border-color 0.25s;
 }
+button {
+  font-size: 1.3em;
+}
 button:hover {
   border-color: #646cff;
 }
