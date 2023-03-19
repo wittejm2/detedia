@@ -46,6 +46,10 @@ h1 {
 }
 button {
   font-size: 1.3em;
+  padding-left: 6px;
+  padding-right: 6px;
+  padding-top: 3px;
+  padding-bottom: 3px;
 }
 button:hover {
   border-color: #646cff;
