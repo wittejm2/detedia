@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import data from "./data";
 import HeaderControls from "./HeaderControls";
@@ -42,6 +42,8 @@ function App() {
       setGuess(Array(5 * data[puzzleIndex].words.length).fill(" "));
     }
   };
+
+  useEffect(()=>changePuzzle(0),[])
   return (
     <div className="DetediaPage">
       <HeaderControls
