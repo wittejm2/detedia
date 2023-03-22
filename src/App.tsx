@@ -41,6 +41,7 @@ function App() {
     } else {
       setGuess(Array(5 * data[puzzleIndex].words.length).fill(" "));
     }
+    setCursorIndex(0);
   };
 
   useEffect(()=>changePuzzle(0),[])
