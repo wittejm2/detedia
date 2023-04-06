@@ -178,7 +178,9 @@ function keyIsMissing(
   }
   if (
     color === "yellow" &&
-    !thisRowGuess.some((guessKey) => guessKey === letter)
+    !thisRowGuess.some((guessKey) => guessKey === letter) &&
+    !thisRowGuess.some((guessKey) => guessKey === " ")
+
   ) {
     return true;
   }
