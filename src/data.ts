@@ -1,4 +1,10 @@
 const data = [
+  { puzzleNumber: 662, words: ["bones", "board", "boral", "borax"] },
+  { puzzleNumber: 661, words: ["style", "qualm"] },
+  { puzzleNumber: 657, words: ["swear", "diner", "nuder", "under"] },
+  { puzzleNumber: 656, words: ["power", "elect", "leave", "leans", "leafy"] },
+  { puzzleNumber: 655, words: ["moors", "small", "smash"] },
+  { puzzleNumber: 654, words: ["primp", "rider", "ratio"] },
   { puzzleNumber: 653, words: ["inter", "proud", "rooks", "glory", "flora"] },
   { puzzleNumber: 652, words: ["suede", "sonar", "stool", "stows", "stock"] },
   { puzzleNumber: 651, words: ["train", "polar", "razes", "march"] },
