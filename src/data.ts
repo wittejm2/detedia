@@ -1,4 +1,11 @@
 const data = [
+  { puzzleNumber: 670, words: ["bundt", "trick", "atoll", "lasts","plate"] },
+  { puzzleNumber: 669, words: ["press", "apply", "chimp", "thump"] },
+  { puzzleNumber: 668, words: ["grass", "flown", "notch", "honey","hound"] },
+  { puzzleNumber: 667, words: ["stiff", "cliff", "griff", "whiff"] },
+  { puzzleNumber: 666, words: ["games", "blend", "dwell", "dwelt"] },
+  { puzzleNumber: 665, words: ["brine", "stung", "gland", "agony"] },
+  { puzzleNumber: 664, words: ["rerun", "piped", "fries", "thief"] },
   { puzzleNumber: 662, words: ["bones", "board", "boral", "borax"] },
   { puzzleNumber: 661, words: ["style", "qualm"] },
   { puzzleNumber: 657, words: ["swear", "diner", "nuder", "under"] },
