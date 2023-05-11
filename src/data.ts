@@ -1,4 +1,17 @@
 const data = [
+  { puzzleNumber: 691, words: ["waits", "round", "chore", "grovy", "broom"] },
+  { puzzleNumber: 690, words: ["chart", "ethic"] },
+  { puzzleNumber: 689, words: ["treat", "ahold", "wacko", "socia", "cocoa",] },
+  { puzzleNumber: 688, words: ["plank", "balot", "agloo", "aglow"] },
+  { puzzleNumber: 687, words: ["north", "macho", "helos", "ahold", "ghoul"] },
+  { puzzleNumber: 686, words: ["testy", "place", "added", "anger"] },
+  {
+    puzzleNumber: 685,
+    words: ["fubar", "broke", "boney", "begot", "bebop", "below"],
+  },
+  { puzzleNumber: 684, words: ["tenor", "plaid", "puffy", "guppy"] },
+  { puzzleNumber: 683, words: ["avert", "prune", "ridge", "dorse", "horde"] },
+  { puzzleNumber: 682, words: ["skips", "stank", "smoke", "sulky"] },
   { puzzleNumber: 680, words: ["inter", "dough", "sappy", "plack", "plaza"] },
   { puzzleNumber: 679, words: ["dream", "redan", "cedar"] },
   { puzzleNumber: 678, words: ["crowd", "cater", "cigar", "circa"] },
